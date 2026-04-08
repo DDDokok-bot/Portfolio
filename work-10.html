@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="detail-page">
+
+<main class="detail" id="detail">
+  <section class="detail__hero" id="detailHero">
+    <img class="detail__bg" id="detailBg" src="reference/duck.png" alt="">
+
+    <div class="detail__veil"></div>
+    <div class="detail__noise"></div>
+
+    <div class="detail__chrome">
+      <button class="detail__back" id="btnBack" type="button">BACK</button>
+    </div>
+
+    <div class="detail__heroInner">
+      <div class="detail__eyebrow">SELECTED WORK</div>
+
+      <h1 class="detail__title">
+        Duck Puzzle<br>
+        Adventure
+      </h1>
+
+      <p class="detail__lead">
+        A Unity puzzle game focused on condition-based level design, where players trigger different outcomes
+        through sequential actions, correct choices, and spatial problem-solving across multiple stages.
+      </p>
+
+      <div class="detail__heroMeta">
+        <span>Puzzle Logic</span>
+        <span>Unity</span>
+        <span>Level Design</span>
+      </div>
+
+      <div class="detail__scrollCue">
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail__contentWrap">
+    <div class="detail__content">
+
+      <section class="detail__section detail__section--intro">
+        <div class="detail__sectionLabel">Overview</div>
+        <div class="detail__sectionBody">
+          <p>
+            This project is a puzzle-based Unity game that more deeply explores condition design in gameplay. The core idea is that different conditions trigger different behaviors and results, so progression depends on understanding how actions, objects, and rules connect across each level.
+          </p>
+          <p>
+            The game moves through three stages. Players begin as a sheep, solve an environmental activation puzzle, make a correct transformation choice in the second level, and finally complete a multi-step escape puzzle in a dark room. The project focuses less on action and more on how layered logic can shape progression.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Main Demo</div>
+        <div class="detail__sectionBody">
+          <div class="detail__mediaCard">
+            <video
+              class="detail__mediaVideo"
+              autoplay
+              muted
+              controls
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source src="reference/duck.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">What I Designed</div>
+        <div class="detail__sectionBody">
+          <div class="detail__grid">
+            <article class="detail__infoCard">
+              <h3>Condition-Based Progression</h3>
+              <p>
+                Built each stage around specific trigger conditions so players must satisfy the right sequence of actions before the next event or pathway becomes available.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Multi-Stage Puzzle Flow</h3>
+              <p>
+                Structured the game across three distinct puzzle phases, each with a different type of challenge: environmental activation, rule-based choice, and spatial object interaction.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Level Logic Design</h3>
+              <p>
+                Focused on how level layout, object placement, and hidden requirements could guide discovery and make the puzzle logic readable through play.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Level 1</div>
+        <div class="detail__sectionBody">
+          <p>
+            The game begins with the player controlling a sheep character in the first level. To progress, the player must eat all of the white flowers in the grass. Completing that condition wakes the giant duck in the pond and triggers the appearance of stairs leading to the next stage.
+          </p>
+          <p>
+            This opening level introduces the project’s logic clearly: the player is not simply moving forward, but learning that the environment changes only when the correct condition is fulfilled.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Level 2</div>
+        <div class="detail__sectionBody">
+          <p>
+            In the second level, the player encounters three doors, each allowing transformation into a different animal. The environment indicates that only one of those animal forms can continue to the next level, so the player must interpret the condition correctly rather than choosing at random.
+          </p>
+          <p>
+            After making the correct choice, the player is allowed to enter the next area through the appropriate door. This stage focuses on conditional selection and using environmental cues to support puzzle reasoning.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Final Level</div>
+        <div class="detail__sectionBody">
+          <p>
+            The final level takes place in a dark room with a locked door. The player must first find the light switch, then locate the key hidden inside a glass of water. After breaking the glass and retrieving the key, the player still cannot directly reach the lock because the character model is too small.
+          </p>
+          <p>
+            To complete the puzzle, the player must also move a nearby box into the correct position, climb onto it, and jump in order to reach the lock and open the door. This final stage combines object interaction, spatial reasoning, and multiple dependent conditions into one sequence.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Process</div>
+        <div class="detail__sectionBody">
+          <p>
+            This project was developed in Unity as a deeper study of condition design in games. Instead of focusing only on atmosphere or character movement, I used the game format to test how different rules, triggers, and dependencies could create varied puzzle experiences from one level to the next.
+          </p>
+          <p>
+            The result is a puzzle game prototype where progression depends on understanding how conditions unlock new behaviors, objects, and routes. Each level explores a different kind of game logic while still contributing to one continuous progression structure.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </section>
+</main>
+
+<script src="work.js"></script>
+</body>
+</html>

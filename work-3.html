@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="detail-page">
+
+<main class="detail" id="detail">
+  <section class="detail__hero" id="detailHero">
+    <img class="detail__bg" id="detailBg" src="reference/air.png" alt="">
+
+    <div class="detail__veil"></div>
+    <div class="detail__noise"></div>
+
+    <div class="detail__chrome">
+      <button class="detail__back" id="btnBack" type="button">BACK</button>
+    </div>
+
+    <div class="detail__heroInner">
+      <div class="detail__eyebrow">SELECTED WORK</div>
+
+      <h1 class="detail__title">
+        Arcade Air<br>
+        Battle
+      </h1>
+
+      <p class="detail__lead">
+        A p5.js arcade shooter focused on state-based gameplay, enemy spawning logic,
+        score-triggered progression, and a two-phase boss battle system.
+      </p>
+
+      <div class="detail__heroMeta">
+        <span>Interaction Design</span>
+        <span>p5.js</span>
+        <span>Game Logic</span>
+      </div>
+
+      <div class="detail__scrollCue">
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail__contentWrap">
+    <div class="detail__content">
+      <section class="detail__section detail__section--intro">
+        <div class="detail__sectionLabel">Overview</div>
+        <div class="detail__sectionBody">
+          <p>
+            This project was inspired by classic 2D arcade airplane shooters, but my main focus was not just visual style.
+            I used the game format as a way to explore structured interaction logic, changing conditions, and system behavior
+            over time.
+          </p>
+          <p>
+            The player fights waves of enemy planes approaching from multiple directions. Once a score threshold is reached,
+            regular enemies stop spawning and the experience shifts into a boss fight. The boss then changes speed and attack
+            patterns based on health, creating a second gameplay phase and making the logic of the system visible through play.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Featured Media</div>
+        <div class="detail__sectionBody">
+          <div class="detail__mediaCard detail__mediaCard--square">
+            <video
+              class="detail__mediaVideo detail__mediaVideo--square"
+              autoplay
+              muted
+              controls
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source src="reference/airfight.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">What I Designed</div>
+        <div class="detail__sectionBody">
+          <div class="detail__grid">
+            <article class="detail__infoCard">
+              <h3>State-Based Progression</h3>
+              <p>
+                Structured the gameplay around changing states, from regular enemy waves to boss encounter,
+                so the whole game evolves through clear conditional logic.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Boss Phase Logic</h3>
+              <p>
+                Designed a two-phase boss system where attack behavior and movement shift with health,
+                making progression feel dynamic instead of repetitive.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Interactive System Design</h3>
+              <p>
+                Used score, spawning rules, enemy types, and boss triggers together to build a gameplay loop
+                that turns programming logic into a playable experience.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Process</div>
+        <div class="detail__sectionBody">
+          <p>
+            The project began with the familiar structure of a simple shooter game, but quickly became an exploration
+            of how game states can create pacing and variation. I focused on building clear conditions: when enemies appear,
+            when they stop, when the boss is triggered, and how the fight changes after that.
+          </p>
+          <p>
+            Rather than treating the project as only a visual remake of a pixel shooter, I used it to study how logic,
+            rules, and timing can shape the player's experience. The final result is a small arcade game that highlights
+            both interactive play and the design of system behavior.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Credits / Notes</div>
+        <div class="detail__sectionBody">
+          <p>
+            Replace this section with your final reflection, role, tools, implementation notes, and any supporting process
+            images or development breakdowns you want to add later.
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<script src="work.js"></script>
+</body>
+</html>

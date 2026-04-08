@@ -1,0 +1,92 @@
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  background:#0f0f10;
+  overflow:hidden;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+.home{
+  position:fixed;
+  inset:0;
+}
+
+.home__bg{
+  position:fixed;   /* ⭐ 改这里：不要 absolute */
+  inset:0;
+
+  width:100vw;
+  height:100vh;
+
+  object-fit:cover;
+  display:block;
+
+  filter: blur(0.6px) saturate(1.05);
+}
+
+.home__overlay{
+  position:absolute;
+  inset:48px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:#fff;
+}
+
+.home__title{
+  font-weight:900;
+  letter-spacing:.10em;
+  line-height:1.05;
+
+  font-size: clamp(64px, 8vw, 120px);
+  text-transform:uppercase;
+  text-align:center;
+
+  color:#ffffff;
+
+  /* ⭐ 关键：视觉加粗 */
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.9);
+
+  text-shadow: 0 10px 32px rgba(0,0,0,.35);
+
+  transform: translateY(200px);
+}
+
+.home__sub{
+  font-weight:900;
+  font-size: 16px;
+  letter-spacing:.58em;
+  text-transform:uppercase;
+  -webkit-text-stroke:0.2px #fff;
+
+}
+
+.home__cta{
+  margin-top: 26px;
+  transform: translateY(60px); /* ✅ 只让按钮往下，不会带动标题/副标题 */
+
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.65);
+  background: rgba(0,0,0,.18);
+  color:#fff;
+  font-weight:900;
+  letter-spacing:.08em;
+  cursor:pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.home__frame{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+
+/* 点击后的淡出 */
+.home.is-exit .home__overlay{
+  opacity:0;
+  transform: translateY(6px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}

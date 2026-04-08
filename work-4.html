@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="detail-page">
+
+<main class="detail" id="detail">
+  <section class="detail__hero" id="detailHero">
+    <img class="detail__bg" id="detailBg" src="reference/flower.jpg" alt="">
+
+    <div class="detail__veil"></div>
+    <div class="detail__noise"></div>
+
+    <div class="detail__chrome">
+      <button class="detail__back" id="btnBack" type="button">BACK</button>
+    </div>
+
+    <div class="detail__heroInner">
+      <div class="detail__eyebrow">SELECTED WORK</div>
+
+      <h1 class="detail__title">
+        Mechanical<br>
+        Flower
+      </h1>
+
+      <p class="detail__lead">
+        A responsive mechanical object that uses gesture input, light sensing, and motor-driven motion
+        to simulate the opening and closing cycle of a flower.
+      </p>
+
+      <div class="detail__heroMeta">
+        <span>Light-Responsive Object</span>
+        <span>Arduino + Python</span>
+        <span>3D Printed Prototype</span>
+      </div>
+
+      <div class="detail__scrollCue">
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail__contentWrap">
+    <div class="detail__content">
+
+      <section class="detail__section detail__section--intro">
+        <div class="detail__sectionLabel">Overview</div>
+        <div class="detail__sectionBody">
+          <p>
+            Mechanical Flower is a physical computing prototype that explores how mechanical behavior can simulate a life-like response. The object can react to either hand gesture input or ambient light and translates that input into the opening and closing motion of a flower.
+          </p>
+          <p>
+            The project combines ESP32 control, motor actuation, light sensing, gesture recognition, Arduino and Python logic, Rhino modeling, and 3D printed parts into one working system. The interaction logic also supports automatic mode switching: when the light sensing component is connected, the system changes from gesture-based input to light-based response.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Main Demo</div>
+        <div class="detail__sectionBody">
+          <div class="detail__mediaCard">
+            <video
+              class="detail__mediaVideo"
+              autoplay
+              muted
+              controls
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source src="reference/flower.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">System</div>
+        <div class="detail__sectionBody">
+          <div class="detail__grid">
+            <article class="detail__infoCard">
+              <h3>Gesture Input</h3>
+              <p>
+                Python-based gesture recognition captures user hand movement and sends motion values to the control system when the prototype is running in gesture mode.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Light Input</h3>
+              <p>
+                A light sensor reads ambient brightness and provides environmental input for the flower to open or close in response to changing light conditions.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Mode Switching</h3>
+              <p>
+                The system supports two input paths. When the light sensing component is connected, control automatically switches from gesture recognition to light-responsive behavior.
+              </p>
+            </article>
+          </div>
+
+          <div class="detail__mediaCard" style="margin-top:18px;">
+            <img class="detail__mediaImage" src="reference/logic.jpg" alt="Mechanical flower system logic diagram">
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Prototype Build</div>
+        <div class="detail__sectionBody">
+          <p>
+            The form was modeled in Rhino and fabricated through 3D printing. The prototype had to balance outer form, internal mechanism, motor space, and wiring layout so the object could function as both a shell and a moving system.
+          </p>
+
+          <div class="detail__grid">
+            <div class="detail__mediaCard">
+              <div class="detail__mediaPlaceholder detail__mediaPlaceholder--asset">
+                <img class="detail__mediaAsset--fitHeightOnly" src="reference/FlowerBuild1.PNG" alt="Mechanical flower build image 1">
+              </div>
+            </div>
+
+            <div class="detail__mediaCard">
+              <div class="detail__mediaPlaceholder detail__mediaPlaceholder--asset">
+                <img class="detail__mediaAsset" src="reference/FlowerBuild2.JPEG" alt="Mechanical flower build image 2">
+              </div>
+            </div>
+
+            <div class="detail__mediaCard">
+              <div class="detail__mediaPlaceholder detail__mediaPlaceholder--asset">
+                <video
+                  class="detail__mediaAsset"
+                  autoplay
+                  muted
+                  controls
+                  loop
+                  playsinline
+                  preload="metadata"
+                >
+                  <source src="reference/FlowerBuild3.MP4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Iteration & Result</div>
+        <div class="detail__sectionBody">
+          <p>
+            A major part of the project was physical iteration. Printed parts, petal components, and transmission details were repeatedly tested and adjusted to improve movement reliability and structural fit. The current deck documents broken parts, mechanism failures, and later-stage prototype results, which makes this section useful for showing both iteration and final outcome.
+          </p>
+
+          <div class="detail__grid">
+            <div class="detail__mediaCard">
+              <div class="detail__mediaPlaceholder detail__mediaPlaceholder--asset">
+                <img class="detail__mediaAsset--fitHeight" src="reference/FlowerProcess1.JPEG" alt="Mechanical flower process image 1">
+              </div>
+            </div>
+
+            <div class="detail__mediaCard">
+              <div class="detail__mediaPlaceholder detail__mediaPlaceholder--asset">
+                <img class="detail__mediaAsset--fitHeight" src="reference/FlowerProcess2.JPEG" alt="Mechanical flower process image 2">
+              </div>
+            </div>
+
+            <div class="detail__mediaCard">
+              <div class="detail__mediaPlaceholder detail__mediaPlaceholder--asset">
+                <img class="detail__mediaAsset--fitHeight" src="reference/FlowerProcess3.JPEG" alt="Mechanical flower process image 3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+</main>
+
+<script src="work.js"></script>
+</body>
+</html>

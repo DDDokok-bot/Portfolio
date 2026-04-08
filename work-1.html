@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="detail-page">
+
+<main class="detail" id="detail">
+  <section class="detail__hero" id="detailHero">
+    <img class="detail__bg" id="detailBg" src="reference/fish.png" alt="">
+
+    <div class="detail__veil"></div>
+    <div class="detail__noise"></div>
+
+    <div class="detail__chrome">
+      <button class="detail__back" id="btnBack" type="button">BACK</button>
+    </div>
+
+    <div class="detail__heroInner">
+      <div class="detail__eyebrow">SELECTED WORK</div>
+
+      <h1 class="detail__title">
+        Interactive<br>
+        Fish Pond
+      </h1>
+
+      <p class="detail__lead">
+        A playful digital ecosystem where users create ripples, influence fish behavior,
+        and explore responsive motion through real-time interaction.
+      </p>
+
+      <div class="detail__heroMeta">
+        <span>Interaction Design</span>
+        <span>p5.js</span>
+        <span>Creative Coding</span>
+      </div>
+
+      <div class="detail__scrollCue">
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail__contentWrap">
+    <div class="detail__content">
+      <section class="detail__section detail__section--intro">
+        <div class="detail__sectionLabel">Overview</div>
+        <div class="detail__sectionBody">
+          <p>
+            This project explores how simple user actions can shape the feeling of a living digital space.
+            Instead of treating interaction as a button press or direct command, the experience is built around
+            subtle environmental response: water movement, fish reaction, rhythm, and visual atmosphere.
+          </p>
+          <p>
+            The goal was to create something that feels playful and immediate, while still showing control over
+            motion design, behavioral logic, and interactive system building.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Featured Media</div>
+        <div class="detail__sectionBody">
+          <div class="detail__mediaCard">
+            <video
+              class="detail__mediaVideo"
+              autoplay
+              muted
+              controls
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source src="reference/fishpond.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">What I Designed</div>
+        <div class="detail__sectionBody">
+          <div class="detail__grid">
+            <article class="detail__infoCard">
+              <h3>Interaction System</h3>
+              <p>
+                Built a responsive interaction flow where user input affects ripple behavior,
+                fish movement, and the overall feeling of the scene.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Motion Behavior</h3>
+              <p>
+                Designed motion rules to make the fish feel reactive rather than purely decorative,
+                balancing predictability with liveliness.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Visual Atmosphere</h3>
+              <p>
+                Used image, motion, and timing together to create a calm but playful environment
+                that rewards hovering, touching, and repeated exploration.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Process</div>
+        <div class="detail__sectionBody">
+          <p>
+            The project began as an experiment in responsive motion and gradually became a study in how behavior
+            can make a digital environment feel alive. I iterated on ripple timing, fish response, and the visual
+            pacing of the whole scene so the interaction would feel intuitive rather than chaotic.
+          </p>
+          <p>
+            As the system evolved, I focused on making each action readable: when the user does something,
+            the environment should answer in a way that feels clear, satisfying, and visually coherent.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Credits / Notes</div>
+        <div class="detail__sectionBody">
+          <p>
+            Replace this section with final reflection, role, timeline, tools, links, and any supporting visuals
+            you want to show later.
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<script src="work.js"></script>
+</body>
+</html>

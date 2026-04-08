@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="detail-page">
+
+<main class="detail" id="detail">
+  <section class="detail__hero" id="detailHero">
+    <img class="detail__bg" id="detailBg" src="reference/Edge of Light.png" alt="">
+
+    <div class="detail__veil"></div>
+    <div class="detail__noise"></div>
+
+    <div class="detail__chrome">
+      <button class="detail__back" id="btnBack" type="button">BACK</button>
+    </div>
+
+    <div class="detail__heroInner">
+      <div class="detail__eyebrow">SELECTED WORK</div>
+
+      <h1 class="detail__title">
+        Interactive<br>
+        Sky
+      </h1>
+
+      <p class="detail__lead">
+        An interactive sky scene where users shift the sun to move between day and night,
+        trigger fireworks with a click, and turn stars into falling streaks through hover.
+      </p>
+
+      <div class="detail__heroMeta">
+        <span>Interaction Design</span>
+        <span>p5.js</span>
+        <span>Creative Coding</span>
+      </div>
+
+      <div class="detail__scrollCue">
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail__contentWrap">
+    <div class="detail__content">
+      <section class="detail__section detail__section--intro">
+        <div class="detail__sectionLabel">Overview</div>
+        <div class="detail__sectionBody">
+          <p>
+            This project explores how a simple environmental control can reshape the mood of an entire scene.
+            By dragging the sun, the user can transition the sky between daytime and nighttime, turning a single
+            interaction into a broader change in atmosphere.
+          </p>
+          <p>
+            Once the scene shifts into night, additional interactions appear: clicking creates fireworks, while
+            hovering over stars causes them to fall diagonally like shooting stars. The project focuses on playful
+            transitions, layered interaction, and making the environment feel responsive to user input.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Featured Media</div>
+        <div class="detail__sectionBody">
+          <div class="detail__mediaCard detail__mediaCard--square">
+            <video
+              class="detail__mediaVideo detail__mediaVideo--square"
+              autoplay
+              muted
+              controls
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source src="reference/sky.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">What I Designed</div>
+        <div class="detail__sectionBody">
+          <div class="detail__grid">
+            <article class="detail__infoCard">
+              <h3>Time Shift Interaction</h3>
+              <p>
+                Designed the main drag interaction so moving the sun feels like directly controlling the transition
+                between morning, evening, and night.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Layered Night Events</h3>
+              <p>
+                Added secondary interactions that only appear at night, giving the project a stronger sense of reward,
+                discovery, and progression.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Atmospheric Motion</h3>
+              <p>
+                Focused on timing, visual rhythm, and motion response to make the sky feel lively rather than static,
+                while keeping the overall interaction simple and readable.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Process</div>
+        <div class="detail__sectionBody">
+          <p>
+            The project started from the idea of making a sky feel interactive through one clear gesture. Instead of
+            building many unrelated controls, I used the sun as the core input and let that movement influence the
+            entire environment.
+          </p>
+          <p>
+            From there, I developed the nighttime interactions as a second layer, so the scene would feel deeper after
+            the initial day-to-night transition. This helped create a small but engaging sequence: shift the sky,
+            discover new behaviors, and continue exploring through motion and play.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Credits / Notes</div>
+        <div class="detail__sectionBody">
+          <p>
+            Replace this section with your final reflection, role, tools, development notes, and any links or process
+            images you want to add later.
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<script src="work.js"></script>
+</body>
+</html>

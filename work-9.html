@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="detail-page">
+
+<main class="detail" id="detail">
+  <section class="detail__hero" id="detailHero">
+    <img class="detail__bg" id="detailBg" src="reference/Car.png" alt="">
+
+    <div class="detail__veil"></div>
+    <div class="detail__noise"></div>
+
+    <div class="detail__chrome">
+      <button class="detail__back" id="btnBack" type="button">BACK</button>
+    </div>
+
+    <div class="detail__heroInner">
+      <div class="detail__eyebrow">SELECTED WORK</div>
+
+      <h1 class="detail__title">
+        Split-Screen<br>
+        Racing
+      </h1>
+
+      <p class="detail__lead">
+        A two-player split-screen racing prototype built in Unity, focused on staged progression,
+        conditional level design, and track structures that bring separate lanes back together into a final competitive finish.
+      </p>
+
+      <div class="detail__heroMeta">
+        <span>Gaming Logic</span>
+        <span>Unity</span>
+        <span>Level Design</span>
+      </div>
+
+      <div class="detail__scrollCue">
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail__contentWrap">
+    <div class="detail__content">
+
+      <section class="detail__section detail__section--intro">
+        <div class="detail__sectionLabel">Overview</div>
+        <div class="detail__sectionBody">
+          <p>
+            This project is a two-player split-screen racing prototype built in Unity. The experience is structured around several stages: vehicle selection, progression through different levels, convergence of two separate racing lanes, and a final competitive push to the finish line.
+          </p>
+          <p>
+            Rather than treating the project as a standard racing game, I used it to explore interactive prototyping through game rules, level transitions, and track design. A major focus was how players move through parallel systems and then re-enter direct competition at the right moment.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Main Demo</div>
+        <div class="detail__sectionBody">
+          <div class="detail__mediaStack">
+            <div class="detail__mediaCard">
+              <video
+                class="detail__mediaVideo"
+                autoplay
+                muted
+                controls
+                loop
+                playsinline
+                preload="metadata"
+              >
+                <source src="reference/Car1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div class="detail__mediaCard">
+              <video
+                class="detail__mediaVideo"
+                autoplay
+                muted
+                controls
+                loop
+                playsinline
+                preload="metadata"
+              >
+                <source src="reference/Car2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">What I Designed</div>
+        <div class="detail__sectionBody">
+          <div class="detail__grid">
+            <article class="detail__infoCard">
+              <h3>Split-Screen Progression</h3>
+              <p>
+                Designed the game around a shared two-player structure where both players move through connected phases rather than one continuous unchanging race.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Conditional Level Design</h3>
+              <p>
+                Focused on building levels with specific gameplay conditions so each stage changes how players respond, navigate, and compete.
+              </p>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Track Merge Logic</h3>
+              <p>
+                Developed the moment where two separate lanes come back together, turning parallel progression into a direct race for the finish.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Game Structure</div>
+        <div class="detail__sectionBody">
+          <p>
+            The prototype begins with a car selection phase, giving each player an initial point of entry into the system. From there, both players move through different stages and race conditions before the two lanes converge into a shared end section.
+          </p>
+          <p>
+            This staged structure makes the race feel less like a single repeated loop and more like a sequence of changing competitive situations. The merge near the end is especially important because it transforms separated progression into direct head-to-head tension.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Level & Track Design</div>
+        <div class="detail__sectionBody">
+          <p>
+            A key challenge of the project was experimenting with level ideas that depended on specific conditions rather than only speed. I used the track as a system for pacing, difficulty, and player comparison, testing how separate routes, obstacles, and layout changes could support both independence and competition.
+          </p>
+          <p>
+            Track design was therefore not only about visual form, but also about when players are separated, when they can read each other’s progress, and when the experience should shift into direct conflict again.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Process</div>
+        <div class="detail__sectionBody">
+          <p>
+            This project was developed as an interactive prototyping exercise in Unity, with the main focus placed on gameplay structure and playable systems rather than polish alone. I used Unity and scripted logic to build stage changes, lane relationships, and the overall race flow.
+          </p>
+          <p>
+            The result is a prototype that studies how split-screen interaction, conditional level design, and track merging can shape a more dynamic multiplayer racing experience.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </section>
+</main>
+
+<script src="work.js"></script>
+</body>
+</html>
