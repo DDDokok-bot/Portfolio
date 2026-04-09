@@ -1086,7 +1086,7 @@ body.cv-page{
 
 @media (max-width: 640px){
   .bigtype{
-    padding:104px 18px 132px;
+    padding:104px 18px 148px;
   }
 
   #title-top{
@@ -1101,7 +1101,7 @@ body.cv-page{
     line-height:1.16;
     letter-spacing:.035em;
     width:min(90vw, 420px);
-    margin-bottom:72px;
+    margin-bottom:96px;
   }
 
   .topbar{
