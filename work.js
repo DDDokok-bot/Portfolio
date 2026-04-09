@@ -8,7 +8,6 @@ let imgSrc = "";
 let ticking = false;
 let isLeaving = false;
 
-// 读取从 index.html 点进来时存的图和索引
 try {
   const raw = sessionStorage.getItem("TRANSITION_TO");
   if (raw) {
@@ -48,8 +47,6 @@ window.addEventListener("resize", requestScrollUpdate);
 
 updateDetailScrollState();
 
-// 完全照 home.js 的思路：
-// 只淡出 UI，然后把当前全屏背景图交给 index.html 去执行缩回缩略图动画
 btnBack.addEventListener("click", () => {
   if (isLeaving) return;
   isLeaving = true;
@@ -64,6 +61,6 @@ btnBack.addEventListener("click", () => {
   }));
 
   setTimeout(() => {
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   }, 220);
 });
