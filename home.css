@@ -145,6 +145,9 @@ body{
   }
 
   .home__cta{
+    position:static;
+    left:auto;
+    bottom:auto;
     margin-top:22px;
     transform:none;
     padding:10px 16px;
