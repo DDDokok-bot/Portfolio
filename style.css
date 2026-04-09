@@ -1086,7 +1086,7 @@ body.cv-page{
 
 @media (max-width: 640px){
   .bigtype{
-    padding:104px 18px 148px;
+    padding:104px 18px 88px;
   }
 
   #title-top{
@@ -1097,11 +1097,12 @@ body.cv-page{
   }
 
   #title-bottom{
-    font-size: clamp(12px, 3.7vw, 16px);
+    font-size: clamp(14px, 3.7vw, 18px);
     line-height:1.16;
     letter-spacing:.035em;
     width:min(90vw, 420px);
-    margin-bottom:96px;
+    margin-bottom:28px;
+    transform: translateY(20px);
   }
 
   .topbar{
@@ -1123,7 +1124,7 @@ body.cv-page{
   }
 
   .stamp{
-    width:min(205px, 54vw);
+    width:min(230px, 60vw);
   }
 
   .meta{
