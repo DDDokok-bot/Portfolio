@@ -51,6 +51,7 @@ body{
   overflow:hidden;
   background: var(--bg);
   color: var(--ink);
+  touch-action:none;
 }
 
 .transition{
@@ -178,7 +179,7 @@ body{
   position:absolute;
   left:0;
   top:0;
-  width:min(380px, 68vw);
+  width:clamp(240px, 26vw, 380px);
   aspect-ratio:3/4;
   transform-origin:center;
   cursor:pointer;
@@ -1006,7 +1007,7 @@ body.cv-page{
   }
 
   .stamp{
-    width:min(290px, 54vw);
+    width:min(250px, 46vw);
   }
 
   .stamp__inner{
