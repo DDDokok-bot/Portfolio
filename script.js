@@ -559,4 +559,5 @@ requestAnimationFrame(() => {
 
 window.addEventListener("resize", () => {
   applyLayout(posRender);
+  
 });
