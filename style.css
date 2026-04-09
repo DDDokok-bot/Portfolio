@@ -982,26 +982,29 @@ body.cv-page{
 
 @media (max-width: 900px){
   .bigtype{
-    padding:96px 28px 78px;
+    padding:92px 24px 92px;
   }
 
   #title-top{
-    font-size: clamp(34px, 8vw, 72px);
-    line-height:.94;
+    font-size: clamp(30px, 6.6vw, 56px);
+    line-height:.96;
+    width:min(92vw, 760px);
   }
 
   #title-bottom{
-    font-size: clamp(14px, 3.4vw, 18px);
-    line-height:1.05;
-    margin-bottom:24px;
+    font-size: clamp(12px, 2.3vw, 16px);
+    line-height:1.08;
+    letter-spacing:.045em;
+    width:min(88vw, 680px);
+    margin-bottom:44px;
   }
 
   .route{
-    opacity:.22;
+    opacity:.16;
   }
 
   .stamp{
-    width:min(320px, 72vw);
+    width:min(250px, 50vw);
   }
 
   .stamp__inner{
@@ -1014,6 +1017,11 @@ body.cv-page{
     width:100%;
     height:100%;
     border-radius:8px;
+  }
+
+  .meta{
+    bottom:24px;
+    font-size:11px;
   }
 
   .detail__chrome{
@@ -1073,5 +1081,53 @@ body.cv-page{
 
   .detail__mediaCard--square{
     width:100%;
+  }
+}
+
+@media (max-width: 640px){
+  .bigtype{
+    padding:74px 18px 108px;
+  }
+
+  #title-top{
+    font-size: clamp(22px, 7vw, 34px);
+    line-height:1;
+    width:min(92vw, 520px);
+  }
+
+  #title-bottom{
+    font-size: clamp(11px, 3.2vw, 14px);
+    line-height:1.12;
+    letter-spacing:.03em;
+    width:min(90vw, 420px);
+    margin-bottom:56px;
+  }
+
+  .topbar{
+    inset:10px 10px auto 10px;
+    height:40px;
+  }
+
+  .topbar__btn{
+    padding:9px 12px;
+    font-size:12px;
+  }
+
+  .topbar__center{
+    font-size:12px;
+  }
+
+  .route{
+    opacity:.1;
+  }
+
+  .stamp{
+    width:min(180px, 46vw);
+  }
+
+  .meta{
+    bottom:20px;
+    font-size:10px;
+    letter-spacing:.06em;
   }
 }
