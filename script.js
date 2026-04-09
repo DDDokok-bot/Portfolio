@@ -268,9 +268,9 @@ function onTouchMove(e){
   const dominantIsX = Math.abs(totalDx) >= Math.abs(totalDy);
 
   if (dominantIsX) {
-    pos -= dx * TOUCH_SENS_X;
+    pos += dx * TOUCH_SENS_X;
   } else {
-    pos += dy * TOUCH_SENS_Y;
+    pos -= dy * TOUCH_SENS_Y;
   }
 
   touchLastX = t.clientX;
