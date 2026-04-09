@@ -113,9 +113,26 @@ function updateUI(i){
 }
 
 function getOffsets(){
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+
+  if (w <= 640) {
+    return {
+      dx: w * 0.34,
+      dy: h * 0.24
+    };
+  }
+
+  if (w <= 900) {
+    return {
+      dx: w * 0.38,
+      dy: h * 0.28
+    };
+  }
+
   return {
-    dx: window.innerWidth * 0.44,
-    dy: window.innerHeight * 0.34
+    dx: w * 0.44,
+    dy: h * 0.34
   };
 }
 
