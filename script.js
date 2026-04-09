@@ -232,12 +232,24 @@ function onWheel(e){
 }
 window.addEventListener("wheel", onWheel, { passive:false });
 
+function hasTouchInput(){
+  return (
+    window.matchMedia?.("(pointer: coarse)").matches ||
+    navigator.maxTouchPoints > 0 ||
+    "ontouchstart" in window
+  );
+}
+
 function isSmallScreen(){
   return window.innerWidth <= 900;
 }
 
+function canSwipeGallery(){
+  return isSmallScreen() || hasTouchInput();
+}
+
 function onTouchStart(e){
-  if (isTransitioning || !isSmallScreen()) return;
+  if (isTransitioning || !canSwipeGallery()) return;
   if (!e.touches || e.touches.length !== 1) return;
 
   const t = e.touches[0];
@@ -250,7 +262,7 @@ function onTouchStart(e){
 }
 
 function onTouchMove(e){
-  if (!touchActive || isTransitioning || !isSmallScreen()) return;
+  if (!touchActive || isTransitioning || !canSwipeGallery()) return;
   if (!e.touches || e.touches.length !== 1) return;
 
   const t = e.touches[0];
@@ -559,5 +571,4 @@ requestAnimationFrame(() => {
 
 window.addEventListener("resize", () => {
   applyLayout(posRender);
-  
 });
