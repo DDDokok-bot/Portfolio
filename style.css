@@ -982,29 +982,31 @@ body.cv-page{
 
 @media (max-width: 900px){
   .bigtype{
-    padding:92px 24px 92px;
+    padding:108px 26px 74px;
   }
 
   #title-top{
-    font-size: clamp(30px, 6.6vw, 56px);
+    font-size: clamp(34px, 5.4vw, 58px);
     line-height:.96;
-    width:min(92vw, 760px);
+    width:min(88vw, 700px);
+    margin-top:0;
   }
 
   #title-bottom{
-    font-size: clamp(12px, 2.3vw, 16px);
-    line-height:1.08;
-    letter-spacing:.045em;
-    width:min(88vw, 680px);
-    margin-bottom:44px;
+    font-size: clamp(14px, 1.95vw, 18px);
+    line-height:1.12;
+    letter-spacing:.035em;
+    width:min(82vw, 620px);
+    margin-bottom:18px;
+    transform: translateY(18px);
   }
 
   .route{
-    opacity:.16;
+    opacity:.14;
   }
 
   .stamp{
-    width:min(250px, 50vw);
+    width:min(290px, 54vw);
   }
 
   .stamp__inner{
@@ -1020,7 +1022,7 @@ body.cv-page{
   }
 
   .meta{
-    bottom:24px;
+    bottom:22px;
     font-size:11px;
   }
 
