@@ -3,26 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home</title>
-  <link rel="stylesheet" href="home.css" />
+  <title>Diagonal Gallery (Loop)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<main class="home" id="home">
-  <!-- 背景图（同一张） -->
-  <img class="home__bg" id="homeBg" src="reference/main.jpg" alt="">
+<header class="topbar">
+  <button class="topbar__btn" onclick="window.location.href='index.html'">HOME</button>
+  <div class="topbar__center">ALL</div>
+  <button class="topbar__btn" onclick="window.location.href='cv.html'">ABOUT</button>
+</header>
 
-  <!-- 文字层 -->
-  <div class="home__overlay">
-    <div class="home__title">JIYAO<br>DUAN</div>
-    <div class="home__sub">A PORTFOLIO WEBSITE</div>
-
-    <button class="home__cta" id="btnWorks">MY WORKS</button>
+<main class="stage">
+  <div class="transition" id="transition" aria-hidden="true">
+    <img class="transition__img" id="transitionImg" alt="">
   </div>
 
+  <div class="paper"></div>
 
+  <div class="bigtype">
+    <div id="title-top"></div>
+    <div id="title-bottom"></div>
+  </div>
+
+  <svg class="route" viewBox="0 0 260 800">
+    <path class="route__path"
+      d="M40,80 C120,160 30,260 130,340 C230,420 80,520 160,600 C230,660 140,720 200,780" />
+  </svg>
+
+  <div class="world" id="world">
+    <article class="stamp" data-idx="0" data-work="index.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/main.jpg" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="1" data-work="work-3.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/air.png" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="2" data-work="work-1.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/fish.png" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="3" data-work="work-2.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/Edge of Light.png" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="4" data-work="work-4.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/flower.jpg" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="5" data-work="work-5.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/Kitchen1.png" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="6" data-work="work-6.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/Timora-00.jpg" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="7" data-work="work-7.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/voice1.JPEG" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="8" data-work="work-8.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/map.png" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="9" data-work="work-9.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/Car.png" alt="">
+      </div>
+    </article>
+
+    <article class="stamp" data-idx="10" data-work="work-10.html">
+      <div class="stamp__inner">
+        <img class="stamp__img" src="reference/duck.png" alt="">
+      </div>
+    </article>
+  </div>
+
+  <div class="meta" id="meta"></div>
 </main>
 
-<script src="home.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
