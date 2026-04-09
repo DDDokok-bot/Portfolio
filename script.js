@@ -84,6 +84,10 @@ const IDLE_SNAP_MS = 80;
 const SNAP_LERP = 0.12;
 const MOVE_LERP = 0.35;
 
+const TOUCH_SENS_X = 0.0036;
+const TOUCH_SENS_Y = 0.0030;
+const TAP_MOVE_TOL = 10;
+
 function clamp(n,min,max){ return Math.max(min,Math.min(max,n)); }
 function lerp(a,b,t){ return a+(b-a)*t; }
 function mod(n,m){ return ((n % m) + m) % m; }
@@ -211,6 +215,13 @@ let posRender = 0;
 let lastInputAt = 0;
 let lastShownIndex = -1;
 
+let touchActive = false;
+let touchStartX = 0;
+let touchStartY = 0;
+let touchLastX = 0;
+let touchLastY = 0;
+let touchMoved = false;
+
 function onWheel(e){
   if (isTransitioning) return;
   e.preventDefault();
@@ -220,6 +231,61 @@ function onWheel(e){
   lastInputAt = performance.now();
 }
 window.addEventListener("wheel", onWheel, { passive:false });
+
+function isSmallScreen(){
+  return window.innerWidth <= 900;
+}
+
+function onTouchStart(e){
+  if (isTransitioning || !isSmallScreen()) return;
+  if (!e.touches || e.touches.length !== 1) return;
+
+  const t = e.touches[0];
+  touchActive = true;
+  touchMoved = false;
+  touchStartX = t.clientX;
+  touchStartY = t.clientY;
+  touchLastX = t.clientX;
+  touchLastY = t.clientY;
+}
+
+function onTouchMove(e){
+  if (!touchActive || isTransitioning || !isSmallScreen()) return;
+  if (!e.touches || e.touches.length !== 1) return;
+
+  const t = e.touches[0];
+  const dx = t.clientX - touchLastX;
+  const dy = t.clientY - touchLastY;
+  const totalDx = t.clientX - touchStartX;
+  const totalDy = t.clientY - touchStartY;
+
+  if (Math.abs(totalDx) > TAP_MOVE_TOL || Math.abs(totalDy) > TAP_MOVE_TOL) {
+    touchMoved = true;
+  }
+
+  e.preventDefault();
+
+  const dominantIsX = Math.abs(totalDx) >= Math.abs(totalDy);
+
+  if (dominantIsX) {
+    pos -= dx * TOUCH_SENS_X;
+  } else {
+    pos += dy * TOUCH_SENS_Y;
+  }
+
+  touchLastX = t.clientX;
+  touchLastY = t.clientY;
+  lastInputAt = performance.now();
+}
+
+function onTouchEnd(){
+  touchActive = false;
+}
+
+window.addEventListener("touchstart", onTouchStart, { passive:true });
+window.addEventListener("touchmove", onTouchMove, { passive:false });
+window.addEventListener("touchend", onTouchEnd, { passive:true });
+window.addEventListener("touchcancel", onTouchEnd, { passive:true });
 
 function animateToFullscreen(fromRect, imgSrc, done){
   isTransitioning = true;
@@ -316,6 +382,7 @@ function getStampRectByIdx(idx){
 
 function onStampClick(e){
   if (isTransitioning) return;
+  if (touchMoved) return;
 
   const stamp = e.currentTarget;
   const workUrl = stamp.getAttribute("data-work");
