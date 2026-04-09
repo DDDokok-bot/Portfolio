@@ -2,6 +2,7 @@ const home = document.getElementById("home");
 const btnWorks = document.getElementById("btnWorks");
 const homeBg = document.getElementById("homeBg");
 
+
 btnWorks.addEventListener("click", () => {
   home.classList.add("is-exit");
 
