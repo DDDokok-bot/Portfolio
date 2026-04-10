@@ -6,64 +6,64 @@ const data = [
     bg:"#4ba372"
   },
   {
-    top:"Arcade Air Battle",
-    bottom:"State-Based Gameplay · p5.js · Boss Phase Logic",
-    meta:"1 - Interaction Design",
-    bg:"#6394d4"
-  },
-  {
-    top:"Interactive Fish Pond",
-    bottom:"Behavior Simulation · p5.js · Responsive Interaction",
-    meta:"2 - Interaction Design",
-    bg:"#62b5ce"
-  },
-  {
-    top:"Interactive Sky",
-    bottom:"Time Shift · p5.js · Responsive Interaction",
-    meta:"3 - Interaction Design",
-    bg:"#e0a969"
-  },
-  {
-    top:"Mechanical Flower",
-    bottom:"Light-Responsive · Arduino + Python · 3D Printing",
-    meta:"4 - Physical Computing",
-    bg:"#706e75"
-  },
-  {
-    top:"Forkcast",
-    bottom:"Dish-Focused Discovery · HTML · CSS · JavaScript",
-    meta:"5 - UIUX Design",
-    bg:"#b8736a"
-  },
-  {
-    top:"TIMORA",
-    bottom:"Academic Planning App · Figma · UI Design",
-    meta:"6 - UIUX Design",
-    bg:"#fad9b9"
-  },
-  {
-    top:"Fridge Voice Assistant",
-    bottom:"Voice Interaction · ProtoPie · UI Design",
-    meta:"7 - UIUX Design",
-    bg:"#7dad71"
-  },
-  {
     top:"Personal Sound Map",
-    bottom:"Spatial Navigation · Unity · Gaussian Splatting",
-    meta:"8 -  Interactive Prototyping",
+    bottom:"Spatial Navigation - Unity - Gaussian Splatting",
+    meta:"1 - Interactive Prototyping",
     bg:"#d6b187"
   },
   {
     top:"Split-Screen Racing",
-    bottom:"Gaming Logic · Unity · Level Design",
-    meta:"9 - Interactive Prototyping",
+    bottom:"Gaming Logic - Unity - Level Design",
+    meta:"2 - Interactive Prototyping",
     bg:"#eea771"
   },
   {
     top:"Duck Puzzle Adventure",
-    bottom:"Puzzle Logic · Unity · Level Design",
-    meta:"10 - Interactive Prototyping",
+    bottom:"Puzzle Logic - Unity - Level Design",
+    meta:"3 - Interactive Prototyping",
     bg:"#8fa66d"
+  },
+  {
+    top:"Mechanical Flower",
+    bottom:"Light-Responsive - Arduino + Python - 3D Printing",
+    meta:"4 - Physical Computing",
+    bg:"#706e75"
+  },
+  {
+    top:"TIMORA",
+    bottom:"Academic Planning App - Figma - UI Design",
+    meta:"5 - UIUX Design",
+    bg:"#fad9b9"
+  },
+  {
+    top:"Forkcast",
+    bottom:"Dish-Focused Discovery - HTML - CSS - JavaScript",
+    meta:"6 - UIUX Design",
+    bg:"#b8736a"
+  },
+  {
+    top:"Fridge Voice Assistant",
+    bottom:"Voice Interaction - ProtoPie - UI Design",
+    meta:"7 - UIUX Design",
+    bg:"#7dad71"
+  },
+  {
+    top:"Arcade Air Battle",
+    bottom:"State-Based Gameplay - p5.js - Boss Phase Logic",
+    meta:"8 - Interaction Design",
+    bg:"#6394d4"
+  },
+  {
+    top:"Interactive Fish Pond",
+    bottom:"Behavior Simulation - p5.js - Responsive Interaction",
+    meta:"9 - Interaction Design",
+    bg:"#62b5ce"
+  },
+  {
+    top:"Interactive Sky",
+    bottom:"Time Shift - p5.js - Responsive Interaction",
+    meta:"10 - Interaction Design",
+    bg:"#e0a969"
   }
 ];
 
