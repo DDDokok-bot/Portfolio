@@ -290,7 +290,7 @@ body{
   }
 
   .stamp{
-    width:clamp(234px, 22.8vw, 334px);
+    width:clamp(270px, 26.4vw, 376px);
   }
 
   .meta{
@@ -431,7 +431,7 @@ body{
   }
 
   .stamp{
-    width:clamp(218px, 20.3vw, 300px);
+    width:clamp(254px, 23.6vw, 342px);
   }
 
   .detail__hero{
@@ -1313,7 +1313,7 @@ body.cv-page{
   }
 
   .stamp{
-    width:min(268px, 50vw);
+    width:min(328px, 62vw);
   }
 
   .stamp__inner{
