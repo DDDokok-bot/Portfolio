@@ -119,6 +119,7 @@ function updateUI(i){
 function getOffsets(){
   const w = window.innerWidth;
   const h = window.innerHeight;
+  const isMediumScreen = w <= 1440 || h <= 900;
 
   if (w <= 640) {
     return {
@@ -131,6 +132,13 @@ function getOffsets(){
     return {
       dx: w * 0.38,
       dy: h * 0.28
+    };
+  }
+
+  if (isMediumScreen) {
+    return {
+      dx: w * 0.39,
+      dy: h * 0.30
     };
   }
 
@@ -169,8 +177,10 @@ function applyLayout(pValue){
     }
 
     const w = window.innerWidth;
+    const h = window.innerHeight;
     const isPhone = w <= 640;
     const isTablet = w <= 900;
+    const isMediumScreen = !isTablet && (w <= 1440 || h <= 900);
 
     let x = d * dx;
     let y = d * dy;
@@ -181,17 +191,17 @@ function applyLayout(pValue){
     let z = 1;
 
     if (dist < 0.28) {
-      scale = isPhone ? 0.96 : isTablet ? 1.02 : 1.16;
+      scale = isPhone ? 0.96 : isTablet ? 1.02 : isMediumScreen ? 0.94 : 1.16;
       opacity = 1;
       blur = 0;
       rotate = 0;
       z = 30;
       el.classList.add("is-focus");
     } else {
-      scale = isPhone ? 0.62 : isTablet ? 0.68 : 0.74;
+      scale = isPhone ? 0.62 : isTablet ? 0.68 : isMediumScreen ? 0.64 : 0.74;
       opacity = isPhone ? 0.22 : 0.34;
       blur = isPhone ? 0.4 : 0.8;
-      rotate = isPhone ? d * 1.2 : d * 2.2;
+      rotate = isPhone ? d * 1.2 : isMediumScreen ? d * 1.6 : d * 2.2;
       z = 10;
       el.classList.remove("is-focus");
     }
