@@ -87,6 +87,7 @@ body{
     repeating-linear-gradient(90deg, rgba(0,0,0,.02) 0 2px, transparent 2px 7px);
   mix-blend-mode: multiply;
   pointer-events:none;
+  z-index:0;
 }
 
 .bigtype{
@@ -97,6 +98,7 @@ body{
   justify-content:space-between;
   padding:110px 56px 90px;
   pointer-events:none;
+  z-index:12;
 }
 
 #title-top,
@@ -112,6 +114,7 @@ body{
   transform: translateX(0);
   text-wrap: balance;
   word-break: normal;
+  text-shadow: 0 2px 12px rgba(0,0,0,.16);
 }
 
 #title-top{
@@ -158,6 +161,7 @@ body{
   height: calc(100vh - 200px);
   opacity:.35;
   pointer-events:none;
+  z-index:2;
 }
 
 .route__path{
@@ -173,6 +177,7 @@ body{
   left:50%;
   top:50%;
   will-change: transform;
+  z-index:4;
 }
 
 .stamp{
@@ -238,6 +243,32 @@ body{
   text-transform:uppercase;
   color: var(--inkSoft);
   pointer-events:none;
+  z-index:12;
+}
+
+@media (max-width: 1440px), (max-height: 900px){
+  .bigtype{
+    padding:96px 42px 76px;
+  }
+
+  #title-top{
+    font-size: clamp(38px, 5.1vw, 72px);
+    width:min(88vw, 1080px);
+  }
+
+  #title-bottom{
+    font-size: clamp(18px, 2.15vw, 30px);
+    width:min(80vw, 860px);
+    margin-bottom:24px;
+  }
+
+  .world{
+    top:54%;
+  }
+
+  .stamp{
+    width:clamp(210px, 23vw, 320px);
+  }
 }
 
 /* =========================
