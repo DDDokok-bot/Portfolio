@@ -246,7 +246,7 @@ body{
   z-index:12;
 }
 
-@media (max-width: 1440px), (max-height: 900px){
+@media (max-width: 1440px){
   .bigtype{
     padding:96px 42px 76px;
   }
@@ -262,12 +262,14 @@ body{
     margin-bottom:24px;
   }
 
-  .world{
-    top:54%;
-  }
-
   .stamp{
     width:clamp(210px, 23vw, 320px);
+  }
+}
+
+@media (max-height: 900px){
+  .world{
+    top:52%;
   }
 }
 
