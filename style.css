@@ -807,12 +807,23 @@ body.detail-page{
   -webkit-backdrop-filter: blur(10px);
 }
 
+.detail__grid--centered .detail__infoCard{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
 .detail__infoCard h3{
   margin:0 0 12px;
   font-size:18px;
   line-height:1.2;
   font-weight:800;
   color:#fff;
+}
+
+.detail__grid--centered .detail__infoCard h3{
+  margin:0;
 }
 
 .detail__infoCard p{
