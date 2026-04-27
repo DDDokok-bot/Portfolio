@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work Detail</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="detail-page">
+
+<main class="detail" id="detail">
+  <section class="detail__hero" id="detailHero">
+    <img class="detail__bg" id="detailBg" src="reference/AR4.png" alt="">
+
+    <div class="detail__veil"></div>
+    <div class="detail__noise"></div>
+
+    <div class="detail__chrome">
+      <button class="detail__back" id="btnBack" type="button">BACK</button>
+    </div>
+
+    <div class="detail__heroInner">
+      <div class="detail__eyebrow">SELECTED WORK</div>
+
+      <h1 class="detail__title">
+        Adaptive Focus<br>
+        Window
+      </h1>
+
+      <p class="detail__lead">
+        A mixed reality system designed to reduce visual distraction for users with ADHD
+      </p>
+
+      <div class="detail__heroMeta">
+        <span>Passthrough VR</span>
+        <span>Attention Guidance</span>
+        <span>Unity</span>
+      </div>
+
+      <div class="detail__scrollCue">
+        <span>SCROLL</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail__contentWrap">
+    <div class="detail__content">
+
+      <section class="detail__section detail__section--intro">
+        <div class="detail__sectionLabel">Reason</div>
+        <div class="detail__sectionBody">
+          <p>
+            People with ADHD can be easily overwhelmed by visually busy environments. In everyday spaces, too many surrounding objects, movements, and details can compete for attention at once. This project explores whether passthrough VR can reduce that overload by selectively blurring unimportant areas of the environment and preserving clarity only where attention is needed.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Main Demo</div>
+        <div class="detail__sectionBody">
+          <div class="detail__mediaCard">
+            <video
+              class="detail__mediaVideo"
+              autoplay
+              muted
+              controls
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source src="reference/AR.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Experience Overview</div>
+        <div class="detail__sectionBody">
+          <p><strong>State 1 - Centered Focus</strong></p>
+
+          <div class="detail__mediaCard">
+            <img class="detail__mediaVideo" src="reference/AR1.png" alt="">
+          </div>
+
+          <p>
+            A clear circular window stays in a fixed position. This mode helps the user reduce surrounding visual noise while keeping attention near the center of view.
+          </p>
+
+          <br>
+
+          <p><strong>State 2 - Object-Locked Focus</strong></p>
+
+          <div class="detail__mediaCard">
+            <img class="detail__mediaVideo" src="reference/AR2.png" alt="">
+          </div>
+
+          <p>
+            The clear window follows a detected target. This mode helps the user stay focused on a specific object while the rest of the environment remains blurred.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Tracking Logic</div>
+        <div class="detail__sectionBody">
+          <p>
+            To support object-locked attention, the system uses QR-code tracking as a stable positional target. Once a valid target is detected, the clear viewing window follows its position. This allows the user to keep visual focus on one chosen object while all surrounding information remains blurred.
+          </p>
+          <p>
+            <strong>"Why QR instead of general object detection?"</strong>
+          </p>
+          <p>
+            QR tracking was chosen because it is faster, more stable, and less computationally heavy than the object detection approaches tested earlier.
+          </p>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Interaction Flow</div>
+        <div class="detail__sectionBody">
+          <div class="detail__mediaCard">
+            <img class="detail__mediaVideo" src="reference/AR3.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section class="detail__section">
+        <div class="detail__sectionLabel">Technical System</div>
+        <div class="detail__sectionBody">
+          <p>
+            The project is built as a processed video panel approach in Unity rather than a native full-screen passthrough post-process. Passthrough camera frames are remapped onto a front-facing panel, where a shader creates a clear circular region and a blurred outer area. Runtime controls update blur strength, window size, and target-following behavior.
+          </p>
+
+          <div class="detail__grid detail__grid--centered">
+            <article class="detail__infoCard">
+              <h3>Passthrough mapping controller</h3>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Window / interaction controller</h3>
+            </article>
+
+            <article class="detail__infoCard">
+              <h3>Blur shader</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+</main>
+
+<script src="work.js"></script>
+</body>
+</html>
